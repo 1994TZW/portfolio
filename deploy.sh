@@ -1,0 +1,2 @@
+./build.sh
+firebase deploy
