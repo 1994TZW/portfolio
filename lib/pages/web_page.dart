@@ -39,8 +39,8 @@ class WebPage extends StatelessWidget {
                     icon: const Icon(FontAwesomeIcons.linkedin),
                     color: iconColor,
                     onPressed: () {
-                       method.launchURL(
-                            ContactType.linkedin, "https://www.linkedin.com/in/thin-zar-win-5859b6247/");
+                      method.launchURL(ContactType.linkedin,
+                          "https://www.linkedin.com/in/thin-zar-win-5859b6247/");
                     },
                     iconSize: 16.0,
                   ),
@@ -51,8 +51,8 @@ class WebPage extends StatelessWidget {
                       color: iconColor,
                       iconSize: 16.0,
                       onPressed: () {
-                         method.launchURL(
-                            ContactType.facebook, "https://www.facebook.com/thinzar.win.3990?mibextid=ZbWKwL");
+                        method.launchURL(ContactType.facebook,
+                            "https://www.facebook.com/thinzar.win.3990?mibextid=ZbWKwL");
                       }),
                   const SizedBox(height: 10),
                   IconButton(
@@ -61,8 +61,7 @@ class WebPage extends StatelessWidget {
                       color: iconColor,
                       iconSize: 16.0,
                       onPressed: () {
-                        method.launchURL(
-                            ContactType.phone, "+959254506208");
+                        method.launchURL(ContactType.phone, "+959254506208");
                       }),
                   const SizedBox(height: 10),
                   IconButton(
@@ -86,11 +85,11 @@ class WebPage extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: ScrollConfiguration(                
-                 behavior: const ScrollBehavior().copyWith(overscroll: false),
+              child: ScrollConfiguration(
+                behavior: const ScrollBehavior().copyWith(overscroll: false),
                 child: SingleChildScrollView(
-                  child: Column(              
-                    crossAxisAlignment: CrossAxisAlignment.start,  
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(
                         height: size.height * .06,
@@ -137,9 +136,10 @@ class WebPage extends StatelessWidget {
                       ),
                       SizedBox(height: size.height * .12),
                       const AboutPage(),
+                      SizedBox(height: size.height * .07),
                       const ExperiencePage(),
                       Center(
-                          child:  Text(
+                          child: Text(
                         "©2022 Thinzar Win. All Rights Reserved.",
                         style: TextStyle(
                           color: textColor,

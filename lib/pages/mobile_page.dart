@@ -104,7 +104,7 @@ class MobilePage extends StatelessWidget {
                     ),
                     LocalText(
                       text:
-                          "I have been gratuated  Bachlor's degree in Computter science, and attented the advanced web development course (Web Design and PHP Web Development) at ICTTI, under the Ministry of Education and Japan International Cooperation Agency(JICA). I am attending Google UX Design Professional Certificate Course (passed 3 courses and studying next courses).\n\n",
+                          "I have been gratuated  Bachlor's degree in Computter science, and attented the advanced web development course (Web Design and PHP Web Development) at ICTTI, under the Ministry of Education and Japan International Cooperation Agency(JICA). I am attending Google UX Design Professional Certificate Course (passed 4 courses and studying next courses).\n\n",
                       textsize: 16.0,
                       color: textColor,
                       letterSpacing: 0.75,
@@ -119,27 +119,36 @@ class MobilePage extends StatelessWidget {
                   ],
                 ),
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        ItemRow(text: "Dart"),
-                        SizedBox(height: 3),
-                        ItemRow(text: "Flutter"),
-                        SizedBox(height: 3),
-                        ItemRow(text: "Firebase"),
-                      ],
+                    const Flexible(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ItemRow(text: "Dart"),
+                          SizedBox(height: 3),
+                          ItemRow(text: "Flutter"),
+                          SizedBox(height: 3),
+                          ItemRow(text: "Firebase"),
+                          SizedBox(height: 3),
+                          ItemRow(text: "Vue"),
+                        ],
+                      ),
                     ),
-                    SizedBox(width: size.height / 5),
-                    const Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        ItemRow(text: "UI/UX (Figma)"),
-                        SizedBox(height: 3),
-                        ItemRow(text: "MYSQL"),
-                        SizedBox(height: 3),
-                        ItemRow(text: "Git - Github"),
-                      ],
+                    SizedBox(width: size.height / 7),
+                    const Flexible(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ItemRow(text: "Tailwindcss"),
+                          SizedBox(height: 3),
+                          ItemRow(text: "UI/UX (Figma)"),
+                          SizedBox(height: 3),
+                          ItemRow(text: "MYSQL"),
+                          SizedBox(height: 3),
+                          ItemRow(text: "Git - Github"),
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -195,10 +204,12 @@ class MobilePage extends StatelessWidget {
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.01,
                   ),
-                  Container(
-                    width: size.width / 4,
-                    height: 1.10,
-                    color: Colors.grey.withOpacity(0.4),
+                  Flexible(
+                    child: Container(
+                      width: size.width / 4,
+                      height: 1.10,
+                      color: Colors.grey.withOpacity(0.4),
+                    ),
                   ),
                 ],
               ),
@@ -303,51 +314,69 @@ class MobilePage extends StatelessWidget {
           const SizedBox(height: 20),
           ExpandableText(text: e.desc, max: 0.4),
           const SizedBox(height: 30),
-                Row(
-                  children: [
-                    Text(
-                      "Stack :",
-                      style: TextStyle(
-                        fontSize: 16.0,
-                        color: secondaryColor.withOpacity(0.6),
-                        letterSpacing: 0.75,
-                      ),
-                    ),
-                    const SizedBox(width: 10),
-                    Flexible(
-                      child: Row(children: e.stacks.asMap().entries.map((s) => Padding(
-                        padding: const EdgeInsets.only(left: 2,right: 2),
-                        child: Text("${s.value} ${(e.stacks.length-1)> s.key?',':''}",style: TextStyle(
-                          fontSize: 16.0,
-                          color: textColor,
-                          letterSpacing: 0.75,
-                        ),),
-                      )).toList())                    )
-                  ],
+          Row(
+            children: [
+              Text(
+                "Stack :",
+                style: TextStyle(
+                  fontSize: 16.0,
+                  color: secondaryColor.withOpacity(0.6),
+                  letterSpacing: 0.75,
                 ),
-                const SizedBox(height: 5),
-                Row(
-                  children: [
-                    Text(
-                      "Tools :",
-                      style: TextStyle(
-                        fontSize: 16.0,
-                        color: secondaryColor.withOpacity(0.6),
-                        letterSpacing: 0.75,
-                      ),
-                    ),
-                    const SizedBox(width: 10),
-                    Flexible(
-                      child: Row(children: e.tools.asMap().entries.map((s) => Padding(
-                        padding: const EdgeInsets.only(left: 2,right: 2),
-                        child: Text("${s.value} ${(e.tools.length-1)> s.key?',':''}",style: TextStyle(
-                          fontSize: 16.0,
-                          color: textColor,
-                          letterSpacing: 0.75,
-                        ),),
-                      )).toList())                    )
-                  ],
-                )
+              ),
+              const SizedBox(width: 10),
+              Flexible(
+                  child: Row(
+                      children: e.stacks
+                          .asMap()
+                          .entries
+                          .map((s) => Padding(
+                                padding:
+                                    const EdgeInsets.only(left: 2, right: 2),
+                                child: Text(
+                                  "${s.value} ${(e.stacks.length - 1) > s.key ? ',' : ''}",
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                    color: textColor,
+                                    letterSpacing: 0.75,
+                                  ),
+                                ),
+                              ))
+                          .toList()))
+            ],
+          ),
+          const SizedBox(height: 5),
+          Row(
+            children: [
+              Text(
+                "Tools :",
+                style: TextStyle(
+                  fontSize: 16.0,
+                  color: secondaryColor.withOpacity(0.6),
+                  letterSpacing: 0.75,
+                ),
+              ),
+              const SizedBox(width: 10),
+              Flexible(
+                  child: Row(
+                      children: e.tools
+                          .asMap()
+                          .entries
+                          .map((s) => Padding(
+                                padding:
+                                    const EdgeInsets.only(left: 2, right: 2),
+                                child: Text(
+                                  "${s.value} ${(e.tools.length - 1) > s.key ? ',' : ''}",
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                    color: textColor,
+                                    letterSpacing: 0.75,
+                                  ),
+                                ),
+                              ))
+                          .toList()))
+            ],
+          )
         ],
       ),
     );

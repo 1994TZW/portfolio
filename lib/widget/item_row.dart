@@ -10,18 +10,15 @@ class ItemRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(
-          Icons.circle,
-          color: secondaryColor.withOpacity(0.6),
-          size: 8.0,
-        ),
+        Icon(Icons.circle, color: secondaryColor.withOpacity(0.6), size: 8.0),
         SizedBox(
           width: MediaQuery.of(context).size.width * 0.01,
         ),
-        Text(
+        Flexible(
+            child: Text(
           text,
           style: TextStyle(color: textColor, letterSpacing: 1.75),
-        )
+        ))
       ],
     );
   }

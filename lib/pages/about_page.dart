@@ -52,7 +52,7 @@ class AboutPage extends StatelessWidget {
                     ),
                     LocalText(
                       text:
-                          "I have been gratuated  Bachlor's degree in Computter science, and attented the advanced web development course (Web Design and PHP Web Development) at ICTTI, under the Ministry of Education and Japan International Cooperation Agency(JICA). I am attending Google UX Design Professional Certificate Course (passed 3 courses and studying next courses).\n\n",
+                          "I have been gratuated  Bachlor's degree in Computter science, and attented the advanced web development course (Web Design and PHP Web Development) at ICTTI, under the Ministry of Education and Japan International Cooperation Agency(JICA). I am attending Google UX Design Professional Certificate Course (passed 4 courses and studying next courses).\n\n",
                       textsize: 16.0,
                       color: textColor,
                       letterSpacing: 0.75,
@@ -80,16 +80,20 @@ class AboutPage extends StatelessWidget {
                             ItemRow(text: "Flutter"),
                             SizedBox(height: 3),
                             ItemRow(text: "Firebase"),
+                            SizedBox(height: 3),
+                            ItemRow(text: "Vue"),
                           ],
                         ),
                       ),
                       SizedBox(
-                        width: size.width * 0.15,
+                        width: size.width * 0.2,
                         child: const Column(
                           children: [
+                            ItemRow(text: "Tailwindcss"),
+                            SizedBox(height: 3),
                             ItemRow(text: "UI/UX (Figma)"),
                             SizedBox(height: 3),
-                            ItemRow(text: "MYSQL"),
+                            ItemRow(text: "SQLite, MYSQL"),
                             SizedBox(height: 3),
                             ItemRow(text: "Git - Github"),
                           ],
