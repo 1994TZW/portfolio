@@ -241,7 +241,7 @@ class MobilePage extends StatelessWidget {
                   color: iconColor,
                   onPressed: () {
                     method.launchURL(ContactType.linkedin,
-                        "https://www.linkedin.com/in/thin-zar-win-5859b6247/");
+                        "https://www.linkedin.com/in/thinzar-win-5859b6247");
                   },
                   iconSize: 16.0,
                 ),
